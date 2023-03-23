@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+</head>
+<body>
+    <a href="/new"><button>Add new message</button></a>
+    <ol>
+        <% locals.messages.forEach(function(message) {%>
+            <li>
+                Message: <%= message.text%>
+                <br>
+                By User: <%= message.user%>
+                <br>
+                Added on: <%= message.added%>
+                <br><br><br>
+            </li>
+        <% }); %>
+    </ol>
+
+</body>
+</html>
